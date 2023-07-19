@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Armour - Landing Page</title>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <style>
+    p {
+      font-size: 14px;
+    }
+
+    h1, h2 {
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+
+    h1 {
+      font-size: 64px;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .navbar-nav.ml-auto .nav-link {
+      padding-right: 0.5rem;
+    }
+
+    .form-inline .form-control {
+      width: 200px;
+    }
+
+    .transparent-bg {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      color: #fff;
+      position: relative;
+    }
+
+    .transparent-bg::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .school-jumbotron {
+      background-image: url("https://underarmour.scene7.com/is/image/Underarmour/FW23_AMR_BTS_Launch_Site_2_1?qlt=75&fmt=jpg&wid=1440&op_sharpen=1&");
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100vh;
+      color: #fff;
+      margin-top: 50px;
+      position: relative;
+    }
+
+    .shop-category {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 25px;
+    }
+
+    .card-img {
+      width: 250px;
+      margin-right: 10px;
+    }
+
+    .shoe-jumbotron {
+      background-image: url("https://underarmour.scene7.com/is/image/Underarmour/FW23_CC_SlipSpeed_Mesh_Site_2_1?qlt=75&fmt=jpg&wid=1440&op_sharpen=1&");
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      color: #fff;
+      margin-top: 50px;
+      position: relative;
+    }
+
+    .video-section {
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .video-section video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+    }
+
+    .content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 400px;
+      margin: 20px;
+      padding: 30px;
+      color: #fff;
+      z-index: 1;
+    }
+
+    .content h2 {
+      font-size: 64px;
+    }
+
+    .video-content h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .video-content p {
+      font-size: 18px;
+    }
+
+    .footer {
+      background-color: #f0f0f0;
+      color: #fff;
+    }
+
+    .footer p,
+    .footer li, 
+    .footer a {
+      color: #555;
+    }
+
+    .footer a:hover {
+      color: #555;
+    }
+
+    .footer h5 {
+      color: #000000;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .footer p, 
+    .footer li {
+      font-size: 14px;
+    }
+
+    .footer hr {
+      border-top-color: #555;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 5px;
+    }
+
+    .footer ul li:last-child {
+      margin-bottom: 0;
+    }
+
+    .footer .social-icons {
+      margin-top: 20px;
+    }
+
+    .footer .social-icons li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .footer .social-icons li:last-child {
+      margin-right: 0;
+    }
+
+    .footer .social-icons a {
+      color: #ccc;
+      font-size: 24px;
+    }
+
+    .social-links li {
+      margin-top: 20px;
+    }
+
+    .email-input {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      margin-bottom: 15px;
+      padding-top: 10px;
+    }
+
+    .email-input input[type="email"] {
+      width: 100%;
+    }
+
+    .email-input .btn {
+      margin-left: 10px;
+    }
+
+    .email-input p {
+      font-size: 10px;
+      width: 100%;
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+    
+    .email-input input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #000;
+      border-radius: 4px;
+    }
+    
+    .email-input label {
+      position: relative;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://www.underarmour.com/on/demandware.static/Sites-US-Site/-/default/dwe3cdd709/images/logo.svg" alt="Under Armour Logo" height="30">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Men's</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Women's</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kids</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shoes</a>
+          </li>
+        </ul>
+        <form class="form-inline ml-auto">
+          <div class="input-group">
+            <input class="form-control transparent-bg" type="search" placeholder="Search UA" aria-label="Search">
+              <button class="btn bg-transparent text-white" type="submit"><i class="fas fa-search"></i></button>
+          </div>
+        </form>
+        <a class="nav-link text-white" href="#"><i class="fas fa-shopping-bag"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="school-jumbotron">
+    <div class="content mb-5">
+      <h3 class="pb-1">Stand Up. Stand Out.</h3>
+      <h1 class="text-uppercase m-0">PROTECT THIS HOUSE.<span style="font-size: 30px; top:0;">®</span></h1>
+      <p style="line-height: 1.4;">Be remembered for your game and gear.</p>
+      <a href="#" class="btn btn-dark">Shop Back To School</a>
+    </div>
+  </section>
+  <!-- Shop Category -->
+  <section class="shop-category">
+    <div class="container text-center pb-3">
+      <h2 class="mt-5">Shop Back To School</h2>
+      <div class="row my-4">
+        <div class="col-md-3">
+          <img src="https://underarmour.scene7.com/is/image/Underarmour/FW23_AMR_BTS_Site_NavTiles_NA_1_1_M_alt2?qlt=70&fmt=jpg&scl=1&wid=1440&hei=1440&size=1440%2C1440" class="card-img" alt="Product 1">
+          <p class="mt-2">Shop Men's</p>
+        </div>
+        <div class="col-md-3">
+          <img src="https://underarmour.scene7.com/is/image/Underarmour/FW23_AMR_BTS_Site_NavTiles_NA_1_1_W_alt2?qlt=70&fmt=jpg&scl=1&wid=1440&hei=1440&size=1440%2C1440" class="card-img" alt="Product 2">
+          <p class="mt-2">Shop Women's</p>
+        </div>
+        <div class="col-md-3">
+          <img src="https://underarmour.scene7.com/is/image/Underarmour/FW23_AMR_BTS_Site_NavTiles_NA_1_1_G_alt2?qlt=70&fmt=jpg&scl=1&wid=1440&hei=1440&size=1440%2C1440" class="card-img" alt="Product 3">
+          <p class="mt-2">Shop Kids</p>
+        </div>
+        <div class="col-md-3">
+          <img src="https://underarmour.scene7.com/is/image/Underarmour/FW23_AMR_BTS_Site_NavTiles_NA_1_1_Backpacks_alt2?qlt=75&fmt=jpg&scl=1&" class="card-img" alt="Product 4">
+          <p class="mt-2">Shop Backpacks</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero Section -->
+  <section class="shoe-jumbotron">
+    <div class="content text-dark">
+      <h1 class="text-uppercase">NEW MESH PACK</h1>
+      <p>The only shoe with 2 modes—heel up to train, heel down to recover—now has built-in air conditioning.</p>
+      <a href="#" class="btn btn-dark">Shop UA SlipSpeed™ Mesh</a>
+    </div>
+  </section>
+  <!--Featured Products-->
+  <section class="featured-products">
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="product col-md-3">
+          <img src="https://underarmour.scene7.com/is/image/Underarmour/3027726-001_A?rp=standard-30pad%7CgridTileDesktop&scl=1&fmt=jpg&qlt=30&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=512&hei=640&size=472%2C600" class="card-img" alt="Product 1">
+          <p class="mt-2">Unisex UA SlipSpeed™ Mesh Training Shoes</p>
+          <p>$150.00</p>
+        </div>
+        <div class="product col-md-3">
+          <img src="https://underarmour.scene7.com/is/image/Underarmour/3027726-100_A?rp=standard-30pad%7CgridTileDesktop&scl=1&fmt=jpg&qlt=30&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=512&hei=640&size=472%2C600" class="card-img" alt="Product 2">
+          <p class="mt-2">Unisex UA SlipSpeed™ Mesh Training Shoes</p>
+          <p>$150.00</p>
+        </div>
+        <div class="product col-md-3">
+          <img src="https://underarmour.scene7.com/is/image/Underarmour/3027726-103_A?rp=standard-30pad%7CgridTileDesktop&scl=1&fmt=jpg&qlt=30&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=512&hei=640&size=472%2C600" class="card-img" alt="Product 3">
+          <p class="mt-2">Unisex UA SlipSpeed™ Mesh Training Shoes</p>
+          <p>$150.00</p>
+        </div>
+        <div class="product col-md-3">
+          <img src="https://underarmour.scene7.com/is/image/Underarmour/3027726-300_A?rp=standard-30pad%7CgridTileDesktop&scl=1&fmt=jpg&qlt=30&resMode=sharp2&cache=on%2Con&bgc=F0F0F0&wid=512&hei=640&size=472%2C600" class="card-img" alt="Product 4">
+          <p class="mt-2">Unisex UA SlipSpeed™ Mesh Training Shoes</p>
+          <p>$150.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Video Section -->
+  <section class="video-section">
+    <video src="./ua-golf-video.mp4" autoplay loop muted>
+      <!-- Add alternative content in case video cannot be played -->
+      Your browser does not support the video tag.
+    </video>
+    <div class="content">
+      <p>UA Iso-Chill Fleece</p>
+      <h2 class="text-uppercase">Feel Ice Cold</h2>
+      <p>UA Iso-Chill feels cool to the touch—eliminating heat so you can stay focused on your round.</p>
+      <a href="#" class="btn btn-dark">Shop Now</a>
+    </div>
+  </section>
+  <!-- Shop Category -->
+  <section class="shop-category">
+    <div class="container text-center py-5">
+      <div class="row">
+        <div class="col">
+          <img src="https://underarmour.scene7.com/is/image/Underarmour/FW23_CURRY_CurryGolf_Site_8_5_2?qlt=70&fmt=jpg&scl=1&wid=684&hei=428&size=684%2C428" class="card-img" style="width: 500px;" alt="Product 1">
+          <p class="mt-2">Shop Curry Golf Collection</p>
+        </div>
+        <div class="col">
+          <img src="https://underarmour.scene7.com/is/image/Underarmour/SS23_ARM_GearUpForSpringSports_Baseball_M_Site_8_5?qlt=70&fmt=jpg&scl=1&wid=684&hei=428&size=684%2C428" style="width: 500px;" class="card-img" alt="Product 2">
+          <p class="mt-2">Shop Baseball</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container py-4">
+      <div class="row py-4">
+        <div class="col-md-3">
+          <img class="mt-2 mb-5" src="https://www.underarmour.com/on/demandware.static/-/Library-Sites-NASharedLibrary/default/dw7789fe42/images/footer/underarmour.svg" style="width: 150px;">
+          <p class="font-weight-bold" style="font-size: 16px;">Stay in the loop.</p>
+          <div class="email-input">
+            <label for="email-input" style="position: relative;">
+              <span style="font-size: 12px; position: absolute; top: -8px; left: 8px; background-color: #f0f0f0; color:#555; padding: 0 5px;">Email Address*</span>
+              <input type="email" id="email-input" name="email" style="background-color: #f0f0f0;" required>
+            </label>
+            <a class="btn btn-dark p-2">Submit</a>
+          </div>
+          <p class="pb-2" style="font-size: 10px; margin-top: -12px">By providing your email, you agree to the <a href="#" style="text-decoration: underline;">Terms & Conditions</a> and <a href="#" style="text-decoration: underline;">Privacy Policy</a>. You may unsubscribe later.</p>
+          <img src="https://www.underarmour.com/_next/image/?url=https%3A%2F%2Fwww.underarmour.com%2Fon%2Fdemandware.static%2F-%2FLibrary-Sites-NASharedLibrary%2Fdefault%2Fdwab247448%2Fimages%2Ffooter%2Fshop.png&w=48&q=75" style="width: 40px;">
+        </div>
+        <div class="col-md-3">
+          <h5 class="mb-3">Live Chat</h5>
+          <p><a href="#">Chat Now</a></p>
+          <p>Monday - Sunday</p>
+        </div>
+        <div class="col-md-3">
+          <h5 class="mb-3">Need Help?</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Shipping & Delivery</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Store Locator</a></li>
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Student Discount</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="row">
+            <div class="col">
+              <h5 class="mb-3">About Under Armour</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Affiliates</a></li>
+                <li><a href="#">About Us/Our Story</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">UA Community</a></li>
+                <li><a href="#">UA Access To Sports</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Product Recalls</a></li>
+                <li><a href="#">Corporate Sales</a></li>
+                <li><a href="#">UA Newsroom</a></li>
+                <li><a href="#">Do Not Sell My Personal Information</a></li>
+                <li><a href="#">Innovation Idea House</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h5 class="mb-3">UA Social</h5>
+              <ul class="list-inline social-links">
+                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>&copy; 2023 Under Armour®, Inc. <a href="#" style="margin-left:5px; text-decoration: underline;">Privacy Policy</a> / <a href="#" style="text-decoration: underline;">Terms of Use</a> / <a href="#" style="text-decoration: underline;">Cookie Preferences</a></p>
+    </div>
+  </footer>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/5916c53508.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
