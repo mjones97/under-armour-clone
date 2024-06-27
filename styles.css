@@ -1,0 +1,282 @@
+h1, h2 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
+h1 {
+    font-size: 64px;
+    line-height: 60px;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 13px;
+}
+
+.container-fluid {
+    padding: 0px 140px;
+}
+
+.container, .featured-products-container {
+    padding: 0px 80px;
+}
+
+.btn {
+    font-size: 13px;
+    padding: 12px 75px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #6e6e6e;
+    border: none;
+}
+
+.navbar {
+    background-color: #000;
+}
+
+.navbar-brand {
+    width: 250px;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item a {
+    color: #FFF;
+}
+
+.nav-item a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+.dropdown-menu li a {
+    color: #000;
+}
+
+.nav-link.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.transparent-bg {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+
+.top-row {
+    border-bottom: 1px solid #FFF;
+}
+
+.bottom-row {
+    border-top: 1px solid #FFF;
+}
+
+span {
+    color: gray;
+}
+
+.shop-cta-container, .giveaway-container {
+    padding: 0px 140px;
+}
+
+.responsive-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.featured-products-container {
+    position: relative;
+}
+
+.featured-products .swiper-button-prev,
+.featured-products .swiper-button-next {
+  position: absolute;
+  top: 40%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.featured-products .swiper-button-prev {
+  left: -20px;
+}
+
+.featured-products .swiper-button-next {
+  right: -20px;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 12px;
+}
+  
+.swiper-slide img {
+    width: 100%;
+}
+  
+.swiper-slide p {
+    margin: 10px 0;
+}
+
+.giveaway-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .giveaway-text {
+    position: absolute;
+    top: 45%;
+    left: 11%;
+    transform: translateY(-50%);
+    width: 520px;
+    padding-top: 40px;
+    z-index: 10;
+  }
+
+.giveaway-text h1 {
+    letter-spacing: 2px;
+}
+
+.footer {
+    background-color: #f0f0f0;
+}
+
+.footer p,
+.footer li, 
+.footer a {
+    color: #555;
+}
+
+.footer p {
+    font-size: 10px;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #555;
+}
+
+.footer h5 {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.footer li {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.footer hr {
+    border-top-color: #555;
+}
+
+.footer ul li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-left {
+    width: 470px;
+}
+
+.social-links li {
+    margin-top: 20px;
+}
+
+.email-input input[type="email"] {
+    width: 300px;
+    padding-left: 15px;
+}
+
+.email-input .btn {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.email-input p {
+    font-size: 10px;
+    line-height: 1.4;
+}
+  
+.email-input input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+  
+.email-input label {
+    position: relative;
+    display: block;
+}
+
+.submit-btn {
+    padding: 10px;
+    width: 100%;
+}
+
+.footer-app-icons img, .payment-methods img {
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (max-width: 767px) {
+    .container, .container-fluid {
+        max-width: 100%;
+        padding: 0px 50px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .footer-wrapper {
+        flex-direction: column;
+    } 
+
+    .footer-right {
+        flex-direction: column;
+        justify-content: start !important;
+    }
+}
+
+@media screen and (max-width: 1479px) {
+    .shop-cta-container, .giveaway-container, .instagram-container {
+        padding: 0 15px;
+    }
+
+    .giveaway-text {
+        left: 5%;
+    }
+}
